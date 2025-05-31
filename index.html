@@ -61,21 +61,33 @@
         <section id="about-me">
             <div class="container">
                 <div class="left">
-                    <img src="./public/avatar_2.png" alt="Me with cat">
+                    <img src="./public/avatar_2.png" alt="Me with cat" id="yumi">
                 </div>
                 <div class="right">
-                    <h2>About Me</h2>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <h2>About Me</h2> <!--Pagination-->
+                    <div class="wrapper">
+                        <p class="swiper-slide" id="content-1">Hey there! I’m Khiet Van Phan, but everyone calls me Joanne — it’s shorter, easier, and honestly, it just feels more “me.” I’m 21 years old, currently living in Canada, and on a mission to go from total beginner to software developer extraordinaire 🧠💻. <br> <br> My programming journey started from absolute zero — no background, no bootcamp, no secret hacker alias (yet) — just a whole lot of curiosity, determination, and a Google search bar. Every line of code I write is a small victory, and while I’m still new to this world, I’m completely hooked. There’s something so satisfying about figuring out how things work behind the screen — like solving little puzzles that eventually build up into something awesome.</p>
+                        <p class="swiper-slide" id="content-2">Outside of coding, I’m a huge animal lover. I mean HUGE. I have a soft spot for parrots (they're just so clever and sassy), and I’m the proud cat mom of three adorable furballs. The one you see on this site? That’s my favorite, but shh… don’t tell the others. 😼 <br> <br> When I’m not tangled in brackets and semicolons, you’ll probably find me unwinding with some video games — I’ve got a weirdly intense love for Minesweeper. It’s the perfect combo of chaos and logic, kind of like learning to code, actually.</p>
+                        <p class="swiper-slide" id="content-3">And let’s not forget about the music! I live for pop anthems and emotional bangers — my heart belongs to Lady Gaga and Taylor Swift. Whether I’m debugging code or dancing around the house, their songs are the soundtrack to my life 🎶✨.<br> <br>So yeah — I’m just a girl with big dreams, three cats, a growing obsession with code, and a playlist full of pop hits. I’m learning, building, and having fun along the way. Stick around — this is only the beginning.</p>
+                    </div>
+                    <div class="pagination-button-container">
+                        <button onclick="prevSlide()" id="prev-button" class="pagination-button"><</button>
+                        <button onclick="nextSlide()" id="next-button" class="pagination-button">></button>
+                    </div>
                 </div>
             </div>
         </section>
+
         <section id="skills">
-            
         </section>
-        <section id="projects"></section>
-        <section id="contact"></section>
+
+        <section id="projects">
+        </section>
+
+        <section id="contact">
+        </section>
+        
     </main>
 </body>
+<script src="./js/index.js"></script>
 </html>

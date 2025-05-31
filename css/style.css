@@ -96,6 +96,7 @@ a{
 section{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 100px; /*For each section*/
 }
 /*CONTAINER*/
 .container{
@@ -139,9 +140,8 @@ nav .right span{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    /* padding: 0 50px; */
     margin: 50px 0;
-    margin-bottom: 100px;
     gap: 40px;
 }
 
@@ -184,7 +184,6 @@ nav .right span{
     padding: 5px 10px;
     border-radius: 5px;
     transition: .3s;
-
 }
 
 #introduction .container .text .links a:hover{
@@ -194,16 +193,62 @@ nav .right span{
     border-radius: 5px;
 }
 
+/*ABOUT ME*/
+#about-me .container .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    transition: .5s
+}
+
+#about-me .container .right h2{
+    justify-self: left;
+}
+
+#about-me .container .left img{
+    transition: .5s;
+}
+
+/*Pagination*/
+.swiper-slide {
+    display: none;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.swiper-slide.active {
+    opacity: 1;
+    display: block;
+}
+
+.pagination-button-container{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+.pagination-button{
+    border: none;
+    background-color: transparent;
+    width: 20px;
+    font-size: 35px;
+}
+
+
+
 
 @media(max-width:1300px){
-    /*SECTION 1: Introduction*/
+    /*SECTION 1 - INTRODUCTION*/
     #introduction .text h2{
         font-size:35px ;
     }
 
     #introduction .container .text p{
-    font-size: 15px;
-}
+        font-size: 15px;
+    }
 
     #introduction .container{
         flex-direction: column-reverse;
@@ -231,6 +276,19 @@ nav .right span{
         border-radius: 5px;
         transition: .3s;
 
+    }
+
+    /*SECTION 2 - ABOUT ME*/
+    #about-me .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-me .container .left img{
+        width: 250px;
+        transition: .5s;
     }
 }
 
