@@ -145,6 +145,7 @@ nav .right span{
     gap: 40px;
 }
 
+
 #introduction .container .text{
     flex:5;
 }
@@ -153,10 +154,12 @@ nav .right span{
     flex: 2;
     display: flex;
     justify-content: right;
+    
 }
 
 #introduction .container .headshot img{
-    width: 150%;
+    width: 100%;
+    transition: .3s;
 }
 
 #introduction .container .text h2{
