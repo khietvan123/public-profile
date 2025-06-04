@@ -101,9 +101,13 @@ section{
 /*CONTAINER*/
 .container{
     display: flex;
-    width: 80%;
+    width: 60%;
 }
 
+.main-title{
+    font-size: 75px;
+    transition: .5s;
+}
 /*Nav bar styling*/
 nav{
     display: flex;
@@ -162,10 +166,6 @@ nav .right span{
     transition: .3s;
 }
 
-#introduction .container .text h2{
-    font-size: 4vw;
-}
-
 #introduction .container .text p{
     font-size: 20px;
     margin-top: 1vw;
@@ -194,20 +194,18 @@ nav .right span{
 }
 
 /*ABOUT ME*/
-#about-me .container .right{
-    display: flex;
+#about-me .container{
     flex-direction: column;
-    justify-content: space-between;
+}
+
+#about-me .container .wrapper{
+    background-color: #f1d9dc;
+    padding: 20px;
+    border-radius: 15px;
+    height: 250px;
+    margin-bottom: 20px;
     margin-top: 20px;
-    transition: .5s
-}
-
-#about-me .container .right h2{
-    justify-self: left;
-}
-
-#about-me .container .left img{
-    transition: .5s;
+    transition: .5s ease;
 }
 
 /*Pagination*/
@@ -237,30 +235,32 @@ nav .right span{
     font-size: 35px;
 }
 
+.pagination-button:hover{
+    /*Some animation here*/
+}
+
 
 
 
 @media(max-width:1300px){
-    /*SECTION 1 - INTRODUCTION*/
-    #introduction .text h2{
-        font-size:35px ;
+    .container{
+        width: 80%;
     }
 
-    #introduction .container .text p{
-        font-size: 15px;
+    .main-title{
+        font-size: 40px;
+
     }
+    /*SECTION 1 - INTRODUCTION*/
 
     #introduction .container{
         flex-direction: column-reverse;
     }
 
     #introduction .container .headshot img{
-    width: 300px;
+        width: 300px;
     }
 
-    #introduction .container .text h2{
-    font-size: 40px;
-    }
 
     #introduction .container .text .links{
         margin-top: 25px;
@@ -280,20 +280,18 @@ nav .right span{
 
     /*SECTION 2 - ABOUT ME*/
     #about-me .container{
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    #about-me .container .left img{
-        width: 250px;
-        transition: .5s;
+    #about-me .container .wrapper{
+        min-height: 300px;
     }
+
 }
 
 @media(max-width:740px){
-    /*SECTION 1: Introduction*/
+    /*SECTION 1 - INTRODUCTION*/
 
     #introduction .container .headshot img{
         width: 200px;
@@ -305,6 +303,12 @@ nav .right span{
         padding: 5px 8px;
         border-radius: 5px;
         font-size: 12px;
+    }
+
+    /*SECTION 2 - ABOUT ME*/
+
+    #about-me .container .wrapper{
+        min-height: 350px;
     }
 }
 
@@ -342,5 +346,11 @@ nav .right span{
 
     #introduction .text .links{
         margin-top: 10px;
+    }
+
+    /*SECTION 2 - ABOUT ME*/
+    #about-me .container .wrapper{
+        overflow: auto;
+        
     }
 }
