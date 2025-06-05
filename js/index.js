@@ -1,4 +1,4 @@
-    //Pagination
+    //Pagination - About me
     let currentContent = 0;
     const slides = document.querySelectorAll('.swiper-slide');
     //console.log(slides)
@@ -21,6 +21,14 @@
             showSlide(currentContent);
         }
     }
+
+    //Pagination - Project
+    let currentProject = 3 //showing 3 project each 
+    const swiperDiv = document.querySelectorAll('.swiper-div');
+    // function showDiv(index){
+    //     swiperDiv.forEach
+    // }
+
 document.addEventListener("DOMContentLoaded",()=>{
     showSlide(currentContent);
 });
