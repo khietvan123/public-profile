@@ -101,6 +101,10 @@ nav .right span{
     flex:5;
 }
 
+#introduction .container .text .links a{
+    margin-top: 20px;
+}
+
 #introduction .container .headshot{
     flex: 2;
     display: flex;
