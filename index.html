@@ -190,40 +190,41 @@
             <div class="container">
                 <h2 class="main-title">Projects</h2>
                 <div class="project-pagination">
-                    <button onclick="nextSlide()" id="next-button-project" class="pagination-button"><i
+                    <button id="prev-button-project" class="pagination-button"><i
                             class="fa-solid fa-arrow-left"></i></button>
-                    <div class="project-pagination-container">
                         <div class="wrapper">
                             <!--Card-->
                             <div class="project-card swiper-div">
                                 <img src="./public/project-img.jpg" alt="Project-image">
                                 <div class="card-content">
-                                    <h3 class="card-title">JavaScript</h3>
-                                    <p class="card-text">Building responsive API and dynamically updating data on
-                                        website.
+                                    <h3 class="card-title">Yae Miko Membership</h3>
+                                    <p class="card-text">In class assignment to build an android registration app
                                     </p>
+                                    <a href="https://github.com/khietvan123/MAP524_A1" target="_blank">Go to Repository</a> 
                                 </div>
                             </div>
 
                             <!--Card-->
                             <div class="project-card swiper-div">
-                                <img src="./public/project-img.jpg" alt="Project-image">
-                                <div class="card-content">
-                                    <h3 class="card-title">JavaScript</h3>
-                                    <p class="card-text">Building responsive API and dynamically updating data on
-                                        website.
-                                    </p>
-                                </div>
+                                
+                                    <img src="./public/project-img.jpg" alt="Project-image">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Personal Profile (current)</h3>
+                                        <p class="card-text">Simple and clean digital personal profile webpage.
+                                        </p>
+                                        <a href="https://github.com/khietvan123/public-profile" target="_blank">Go to page</a> 
+                                    </div>
+                                
                             </div>
-
+                            
                             <!--Card-->
                             <div class="project-card swiper-div">
                                 <img src="./public/project-img.jpg" alt="Project-image">
                                 <div class="card-content">
-                                    <h3 class="card-title">JavaScript</h3>
-                                    <p class="card-text">Building responsive API and dynamically updating data on
-                                        website.
+                                    <h3 class="card-title">Personal Profile</h3>
+                                    <p class="card-text">In class assignment to build your first personal digital profile
                                     </p>
+                                    <a href="https://github.com/khietvan123/profile" target="_blank">Go to page</a> 
                                 </div>
                             </div>
  
@@ -231,25 +232,53 @@
                             <div class="project-card swiper-div">
                                 <img src="./public/project-img.jpg" alt="Project-image">
                                 <div class="card-content">
-                                    <h3 class="card-title">JavaScript</h3>
-                                    <p class="card-text">Building responsive API and dynamically updating data on
-                                        website.
+                                    <h3 class="card-title">Hotel Searching Website</h3>
+                                    <p class="card-text">In class assignment that to fetch and build a responsive web API with JavaScript
                                     </p>
+                                    <a href="https://github.com/khietvan123/WEB422_A2" target="_blank">Go to page</a> 
+                                </div>
+                            </div>
+
+                            <!--Card-->
+                            <div class="project-card swiper-div">
+                                <img src="./public/project-img.jpg" alt="Project-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">Pop Music App</h3>
+                                    <p class="card-text">Website that shows songs of my favorite artist
+                                    </p>
+                                    <a href="https://github.com/khietvan123/Pop_Music_app" target="_blank">Go to page</a> 
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-                    <button onclick="nextSlide()" id="next-button-project" class="pagination-button"><i
+                    <button id="next-button-project" class="pagination-button"><i
                             class="fa-solid fa-arrow-right"></i></button>
                 </div>
-
             </div>
         </section>
-        <section id="contact">
-        </section>
 
+        <section id="contact">
+            <div class="container">
+                <h2 class="main-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <img src="./public/contact.png" alt="Contact Illustration">
+                    <form action="https://formsubmit.co/joannephan04@gmail.com" method="POST">
+                        <input type="text" name="firstname" placeholder="First Name">
+                        <input type="text" name="lastname" placeholder="Last Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="text" name="phone" placeholder="phone number">
+                        <textarea placeholder="Description" id="message" name="message"></textarea>
+                        <button type="submit" value="send" id="form-button">Send</button>
+                    </form>
+                </div> 
+            </div>
+        </section>
     </main>
+    <footer>
+        <div id="copy-right">
+            @<em>Copyright 2025. All Rights Reserved</em>
+        </div>
+        <p>Mississauga, ON</p>
+    </footer>
 </body>
 <script src="./js/index.js"></script>
 

@@ -45,6 +45,7 @@ section{
 .main-title{
     font-size: 75px;
     transition: .5s ease;
+    margin-bottom: 60px;
 }
 
 .text-content{
@@ -110,6 +111,12 @@ nav .right span{
 #introduction .container .headshot img{
     width: 100%;
     transition: .3s;
+
+}
+
+#introduction .container .headshot img:hover{
+    filter: drop-shadow(5px 5px 30px rgb(172, 165, 177));
+    transform: translateY(-10px) scaleX(-1);
 }
 
 #introduction .container .text .links{
@@ -199,7 +206,6 @@ nav .right span{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
     border: 2px solid rgba(7, 7, 7, 0.12); */
        
-    transition: all 0.3s ease;
     position: relative;
     display: flex;
     justify-content: center;
@@ -212,7 +218,7 @@ nav .right span{
 .card-content{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -226,6 +232,8 @@ nav .right span{
     opacity: 0;
     transition: all .3s ease;
 }
+
+/*SKILLS*/
 
 .skills-card:hover{
     height: 280px;
@@ -270,47 +278,173 @@ nav .right span{
    
 }
 
+
 /*SECTION 4 - PROJECTS*/
 #projects .container{
     flex-direction: column;
+    text-align: center;
 }
+
 /*Card styling*/
 .project-card{
+    display: flex;
     width: 100%;
-    max-width: 450px;
-    min-width: 200px;
+    max-width: 250px;
+    
     height: 300px;
+    
     background-color: transparent;
     margin: 30px;
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
     border: 2px solid rgba(7, 7, 7, 0.12);
-       
-    transition: all 0.3s ease;
-    position: relative;
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     flex-direction: column;
     cursor: pointer;
     transition: all 0.3s ease;
+    a{
+        opacity: 0;
+        transition: .5s ease;
+        display: none;
+    }
+
+    .card-text{
+        opacity: 0;
+        display: none;
+        transition: .5s ease;
+    }
 }
 
 .project-card img{
-    max-width: 150px;
+    max-width: 200px;
+    margin: 0 20px;
+}
+
+.project-card:hover{
+    height: 380px;
+    .card-content a{
+        opacity: 1;
+        display: block;
+    }
+
+    .card-text{
+        opacity: 1;
+        display: block;
+    }
 }
 
 #projects .container .project-pagination{
     display: flex;
-}
-
-#projects .wrapper .project-card .card-content .card-text{
-    opacity: 1;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #projects .wrapper{
     display: flex;
-    
+    gap: 16px;
+    transform: .5s ease;
+    transition: .6 ease-in-out;
+}
+
+/*SECTION 5 - CONTACT*/
+#contact .container{
+    flex-direction: column;
+    text-align: center;
+}
+
+#contact .container .main-title{
+    margin-bottom: 60px;
+}
+#contact .container .contact-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact .container .contact-container img{
+    width: 700px;
+    animation: floating 3s ease-in-out infinite;
+}
+
+#contact .container .contact-container form{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1d9dc;
+    padding:30px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+#contact .container .contact-container form input{
+    margin: 10px;
+    width: 650px;
+    height: 60px;
+    font-size: 20px;
+
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid var(--text-color);
+}
+
+#message{
+    width: 650px;
+    height: 150px;
+    resize: vertical;
+    font-size: 20px;
+    margin: 10px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid var(--text-color);
+}
+
+#form-button{
+    border: 2px solid #3D2C2E;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    background:var(--text-color);
+    color: var(--background-color);
+
+    transition: .5s;
+}
+
+#form-button:hover{
+    color:var(--text-color);
+    background-color: var(--background-color);
+    border: var(--text-color) solid 1px;
+    border-radius: 5px;
+}
+
+/*FOOTER*/
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:2400px){
+    #contact .container .contact-container img{
+        width: 450px;
+    }
+
+    #contact .container .contact-container form{
+        padding: 20px;
+    }
+
+    #contact .container .contact-container form input{
+        width: 400px;
+    }
+
+    #contact .container .contact-container form textarea{
+        width: 400px;
+    }
 }
 
 @media(max-width:1300px){
@@ -364,6 +498,35 @@ nav .right span{
         min-height: 300px;
     }
 
+    /*SECTION 4 - PROJECTS*/
+    .project-card{
+        width: 150px;
+        margin: 0 5px;
+        height: 200px;
+    }
+
+    .project-card img{
+        width: 120px;
+    }
+
+    /*SECTION 5 - CONTACT*/
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .contact-container img{
+        margin-bottom: 30px;
+    }
+
+}
+
+@media(max-width:900px) {
+
+    #projects .container .project-pagination .wrapper{
+        justify-content: center;
+        height: 500px;
+        overflow: auto;
+    }
 }
 
 @media(max-width:740px){
@@ -385,6 +548,16 @@ nav .right span{
 
     #about-me .container .wrapper{
         min-height: 350px;
+    }
+
+    /*SECTION 4 - PROJECTS*/
+    #projects .container .project-pagination button{
+        display: none;
+    }
+
+    #projects .container .project-pagination .wrapper{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -429,5 +602,42 @@ nav .right span{
     #about-me .container .wrapper{
         overflow: auto;
         
+    }
+
+    /*SECTION 5 - CONTACT*/
+    #contact .container .contact-container img{
+        width: 250px;
+    }
+    #contact .container .contact-container form input{
+        width: 250px;
+    }
+
+    #contact .container .contact-container form textarea{
+        width: 250px;
+    }
+}
+
+@keyframes  floating {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-50px); /*The element moves upward by 50 pixels*/
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-up {
+    from{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
     }
 }
