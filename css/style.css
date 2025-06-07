@@ -35,6 +35,7 @@ section{
     display: flex;
     justify-content: space-around;
     margin-bottom: 100px; /*For each section*/
+    animation: fade-up 1s ease;
 }
 
 .container{
